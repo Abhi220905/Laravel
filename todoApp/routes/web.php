@@ -21,14 +21,17 @@ Route::get('/task', function(){
 });
 
 /// Unit 1 - 7
-Route::get('task/{name}', function($name){
+Route::get('/task/{name}', function($name){
     return "task name is $name";
 });
 
 /// Unit 1 - 8
-Route::get('task/{name}/{priority}',function($name, $priority){
+Route::get('/task/{name}/{priority}',function($name, $priority){
     return "The task name is $name and that was priority $priority";
 });
 
 // Unit 1 - 9
-// Route:::get('task/')
+Route::get('/pro9', function(){
+    $task = ["study", "eat", "sleep"];
+    return view('tasklist', compact('task'));
+});
