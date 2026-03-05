@@ -14,3 +14,7 @@ Route::get('/', function () {
 Route::get('/welcome', function (){
     return "Welcome to Laravel!!!";
 });
+
+Route::get('/task', function(){
+    return ['study', 'eat', 'sleep'];
+});
